@@ -28,6 +28,10 @@ public class Login extends JDialog{
                     res = pst.executeQuery();
                     if (res.next()){
                         JOptionPane.showMessageDialog(null,"Welcome! " + res.getString(2));
+                        MainPage mp = new MainPage();
+                        // Set visibility of MainPage to true
+                        mp.display();
+                        dispose();
                     }else {
                         JOptionPane.showMessageDialog(null,"Invalid Login");
                     }
