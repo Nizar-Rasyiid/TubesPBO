@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Register">
+  <grid id="27dc6" binding="RegisterPanel" layout-manager="GridLayoutManager" row-count="10" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="20" y="20" width="427" height="357"/>
+    </constraints>
+    <properties>
+      <background color="-328966"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="a2392" class="javax.swing.JLabel" binding="Register">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Montserrat" size="16" style="1"/>
+          <text value="Register"/>
+        </properties>
+      </component>
+      <component id="1dd88" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+          <text value="Nama"/>
+        </properties>
+      </component>
+      <component id="c1a74" class="javax.swing.JTextField" binding="tfName">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <columns value="0"/>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+        </properties>
+      </component>
+      <component id="91045" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+          <text value="User ID"/>
+        </properties>
+      </component>
+      <component id="8e842" class="javax.swing.JTextField" binding="tfUsername">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="65121" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+          <text value="No HP"/>
+        </properties>
+      </component>
+      <component id="c76e3" class="javax.swing.JTextField" binding="tfPhone">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+        </properties>
+      </component>
+      <component id="fd974" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+          <text value="Password"/>
+        </properties>
+      </component>
+      <component id="e4ae4" class="javax.swing.JTextField" binding="pfPassword">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+        </properties>
+      </component>
+      <component id="692da" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+          <text value="Confirm Password"/>
+        </properties>
+      </component>
+      <component id="42945" class="javax.swing.JTextField" binding="pfConfirmPassword">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+        </properties>
+      </component>
+      <component id="17267" class="javax.swing.JButton" binding="btnRegister">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+          <text value="Register"/>
+        </properties>
+      </component>
+      <component id="6c3fc" class="javax.swing.JButton" binding="btnCancel">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+          <text value="Cancel"/>
+        </properties>
+      </component>
+      <vspacer id="a9aa2">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="e9a5" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+          <text value="Alamat"/>
+        </properties>
+      </component>
+      <component id="f56ce" class="javax.swing.JTextField" binding="tfAlamat">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="81f33" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Poppins SemiBold" size="12" style="0"/>
+          <text value="Role"/>
+        </properties>
+      </component>
+      <component id="726f8" class="javax.swing.JComboBox" binding="cbRole">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Pilih Role"/>
+            <item value="Pengguna"/>
+            <item value="Kurir"/>
+          </model>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

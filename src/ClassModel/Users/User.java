@@ -1,17 +1,18 @@
 package ClassModel.Users;
 
-public abstract class User {
-    private int idUser;
-    private String nama;
-    private String alamat;
-    private String noHp;
+public class User {
+    public String idUser;
+    public String nama;
+    public String alamat;
+    public String noHp;
+    public String role;
+    public String Password;
 
-    private String role;
 
     public String getRole() {
         return role;
     }
-    public  User(int idUser,String nama,String alamat,String noHp,String role){
+    public  User(String idUser,String nama,String alamat,String noHp,String role){
         this.idUser = idUser;
         this.nama = nama;
         this.alamat = alamat;
@@ -22,11 +23,11 @@ public abstract class User {
         this.role = role;
     }
 
-    public int getIdUser() {
+    public String getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(int idUser) {
+    public void setIdUser(String idUser) {
         this.idUser = idUser;
     }
 

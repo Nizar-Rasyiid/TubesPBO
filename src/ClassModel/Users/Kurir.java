@@ -3,7 +3,7 @@ package ClassModel.Users;
 public class Kurir extends User{
     private int idKurir;
 
-    public Kurir(int idKurir,int idUser, String nama, String alamat, String noHp, String role) {
+    public Kurir(int idKurir,String idUser, String nama, String alamat, String noHp, String role) {
         super(idUser, nama, alamat, noHp, role);
         this.idKurir = idKurir;
     }
