@@ -1,7 +1,12 @@
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,25 +23,26 @@ public class Login extends JDialog{
 
     public Login(){
         loginButton.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
                 String username = tfUsername.getText();
                 String password = String.valueOf(pfPassword.getPassword());
                 try {
-                    String sqlquery = "SELECT * FROM `user` WHERE username =  '"+username+"' AND password = '"+password+"'" ;
+                    String sqlquery = "SELECT * FROM `user` WHERE username =  '" + username + "' AND password = '" + password + "'";
                     pst = conn.prepareStatement(sqlquery);
                     res = pst.executeQuery();
-                    if (res.next()){
-                        JOptionPane.showMessageDialog(null,"Welcome! " + res.getString(2));
+                    if (res.next()) {
+                        JOptionPane.showMessageDialog(null, "Welcome! " + res.getString(2));
                         MainPage mp = new MainPage();
                         // Set visibility of MainPage to true
                         mp.display();
                         dispose();
-                    }else {
-                        JOptionPane.showMessageDialog(null,"Invalid Login");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Invalid Login");
                     }
-                }catch (SQLException ex){
-                    JOptionPane.showMessageDialog(null,ex);
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, ex);
                 }
             }
         });
@@ -51,6 +57,7 @@ public class Login extends JDialog{
         frame.pack();
         frame.setVisible(true);
     }
+
     private void createUIComponents() {
         // TODO: place custom component creation code here
     }
