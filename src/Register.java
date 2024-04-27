@@ -25,7 +25,7 @@ public class Register extends JDialog {
     public Register(JFrame parent){
         super(parent);
         JFrame frame = new JFrame("Register.form");
-        frame.setPreferredSize(new Dimension(400,300));
+        frame.setPreferredSize(new Dimension(400,320));
         frame.setContentPane(new Register().RegisterPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLocationRelativeTo(null);
