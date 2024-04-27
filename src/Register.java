@@ -24,12 +24,13 @@ public class Register extends JDialog {
 
     public Register(JFrame parent){
         super(parent);
-        setTitle("Create a new account");
-        setContentPane(RegisterPanel);
-        setMinimumSize(new Dimension(490,474));
-        setModal(true);
-        setLocationRelativeTo(parent);
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        JFrame frame = new JFrame("Register.form");
+        frame.setPreferredSize(new Dimension(400,300));
+        frame.setContentPane(new Register().RegisterPanel);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.pack();
+        frame.setVisible(true);
 
         btnRegister.addActionListener(new ActionListener() {
             @Override
@@ -43,6 +44,10 @@ public class Register extends JDialog {
                 dispose();
             }
         });
+    }
+
+    public Register() {
+
     }
 
     private void RegisterUser() {
