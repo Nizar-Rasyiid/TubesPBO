@@ -19,6 +19,7 @@ public class Profile extends JDialog {
     private JButton editButton1;
     private JButton editButton2;
     private JButton editButton3;
+    private JButton editPasswordButton;
     private JLabel label1;
     private JLabel label2;
     private JLabel label3;
@@ -71,6 +72,13 @@ public class Profile extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 editNoHp(); // Call method to edit noHp
+            }
+        });
+
+        editPasswordButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                editPassword(); // Call method to edit password
             }
         });
     }
@@ -152,9 +160,16 @@ public class Profile extends JDialog {
         gbc.gridy = 4;
         contentPane.add(editButton3, gbc);
 
-        backButton = new JButton("<-");
+        editPasswordButton = new JButton("Edit Password");
         gbc.gridx = 0;
         gbc.gridy = 5;
+        gbc.gridwidth = 3;
+        gbc.insets = new Insets(20, 0, 10, 0);
+        contentPane.add(editPasswordButton, gbc);
+
+        backButton = new JButton("<-");
+        gbc.gridx = 0;
+        gbc.gridy = 6;
         gbc.gridwidth = 3;
         gbc.insets = new Insets(20, 0, 10, 0);
         contentPane.add(backButton, gbc);
@@ -299,5 +314,38 @@ public class Profile extends JDialog {
                 JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
+    }
+
+    private void editPassword() {
+        JPasswordField pf = new JPasswordField();
+        int okCxl = JOptionPane.showConfirmDialog(this, pf, "Enter new password", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+
+        if (okCxl == JOptionPane.OK_OPTION) {
+            String newPassword = new String(pf.getPassword());
+
+            if (newPassword != null && !newPassword.trim().isEmpty()) {
+                String updateQuery = "UPDATE user SET password = ? WHERE username = ?";
+                try {
+                    PreparedStatement pst = conn.prepareStatement(updateQuery);
+                    pst.setString(1, newPassword);
+                    pst.setString(2, username);
+
+                    int rowsAffected = pst.executeUpdate();
+                    if (rowsAffected > 0) {
+                        JOptionPane.showMessageDialog(this, "Password updated successfully");
+                        password = newPassword;
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Failed to update password", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Profile profile = new Profile();
+        profile.display();
     }
 }
