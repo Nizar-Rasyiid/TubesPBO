@@ -1,21 +1,16 @@
 package View;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MainPage extends JDialog {
     private JPanel panel1;
     private JButton profileButton;
 
     public MainPage(){
-        profileButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Profile profilePage = new Profile();
-                profilePage.display();
-                MainPage.this.dispose();
-            }
+        profileButton.addActionListener(e -> {
+            Profile profilePage = new Profile();
+            profilePage.display();
+            MainPage.this.dispose();
         });
     }
 
