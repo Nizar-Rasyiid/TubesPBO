@@ -1,4 +1,4 @@
-package ClassModel.Users;
+package Model.Users;
 
 public class Kurir extends User{
     private int idKurir;

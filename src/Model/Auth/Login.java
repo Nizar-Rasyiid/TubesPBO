@@ -1,4 +1,4 @@
-package ClassModel.Auth;
+package Model.Auth;
 
 public abstract class Login {
     private String username;

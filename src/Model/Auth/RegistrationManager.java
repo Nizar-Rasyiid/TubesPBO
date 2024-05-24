@@ -1,5 +1,5 @@
-package ClassModel.Auth;
-import ClassModel.Users.User;
+package Model.Auth;
+import Model.Users.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,4 +1,4 @@
-package ClassModel.Users;
+package Model.Users;
 
 public abstract class User {
     private int idUser;

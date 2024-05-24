@@ -1,11 +1,8 @@
+package View;
+
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class MainPage extends JDialog {
     private JPanel panel1;
@@ -17,7 +14,7 @@ public class MainPage extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 Profile profilePage = new Profile();
                 profilePage.display();
-                dispose();
+                MainPage.this.dispose();
             }
         });
     }
